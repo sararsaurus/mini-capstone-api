@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get "/tiny_hippo", controller: "products", action: "tiny_hippo"
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/sleepy_dragon", controller: "products", action: "sleepy_dragon"
 end
