@@ -10,29 +10,25 @@ class ProductsController < ApplicationController
   end
 
   def create
+    #below is passing in a hash from an end user
     product = Product.new(
-      name: "Baby Octopus",
-      price: 5,
-      image_url: "https://images4-f.ravelrycache.com/uploads/AllFromJade/722750265/IMG_0660_small2.JPG",
-      description: "Tiny baby octopus that can be customized into aliens (three eyes) or cyclopes (one eye)",
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"],
     )
     product.save
     render json: product.as_json
   end
 
-  # def all_products
-  #   products = Product.all
-  #   render json: products.as_json
-  # end
+  def update
+    product = Product.find_by(id: params["id"])
 
-  # def first_product
-  #   product = Product.first
-  #   render json: product.as_json
-  # end
-
-  # def second_product
-  #   product = Product.second
-  #   render json: product.as_json
-  # end
-
+    product.name = params["name"] || product.name
+    product.price = params["price"] || product.price
+    product.image_url = params["image_url"] || product.image_url
+    product.description = params["description"] || product.description
+    product.save
+    render json: product.as_json
+  end
 end

@@ -1,9 +1,28 @@
-###PRODUCTS INDEX
+### PRODUCTS INDEX
 GET http://localhost:3000/products.json
 
-###PRODUCTS SHOW
+### PRODUCTS SHOW
 GET http://localhost:3000/products/2.json
 
 
-###PRODUCTS CREATE
+### PRODUCTS CREATE (MUST LEAVE A LINE AFTER CONTENT TYPE!)
 POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+"name": "Baby Octopus",
+"price": 5,
+"image_url": "https://images4-f.ravelrycache.com/uploads/AllFromJade/722750265/IMG_0660_small2.JPG", 
+"description": "Tiny baby octopus that can be customized into aliens (three eyes) or cyclopes (one eye)"
+}
+
+### PRODUCTS UPDATE
+PATCH http://localhost:3000/products/3.json
+Content-Type: application/json
+
+{
+  "name": "Chocolate cake",
+  "price": 0,
+  "image_url": "no url",
+  "description": "delicious"
+}
