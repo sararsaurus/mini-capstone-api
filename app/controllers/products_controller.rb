@@ -11,13 +11,13 @@ class ProductsController < ApplicationController
 
   def create
     #below is passing in a hash from an end user
-    product = Product.new(
+    @product = Product.new(
       name: params["name"],
       price: params["price"],
       image_url: params["image_url"],
       description: params["description"],
     )
-    if product.save #happy path
+    if @product.save #happy path
       render json: product.as_json
     else #sad path
       render json: { errors: product.errors.full_messages }, status: 418
