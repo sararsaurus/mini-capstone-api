@@ -11,20 +11,18 @@ Content-Type: application/json
 
 {
 "name": "Chocolate cake",
-"price": 5,
+"price": 22,
 "image_url": "no url", 
-"description": "delicious"
+"description": "hi",
+"created_at": "today"
 }
 
 ### PRODUCTS UPDATE
-PATCH http://localhost:3000/products/13.json
+PATCH http://localhost:3000/products/6.json
 Content-Type: application/json
 
 {
-  "name": "Chocolate cake",
-  "price": 0,
-  "image_url": "no url",
-  "description": "delicious"
+  "name": "Tiny Hippo"
 }
 
 ### PRODUCTS DESTROY

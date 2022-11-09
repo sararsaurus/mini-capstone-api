@@ -5,3 +5,6 @@ Product.create(name: "Tiny Hippo", price: 15, image_url: "https://cdn.shopify.co
 Product.create(name: "Sleepy Dragon", price: 30, image_url: "https://d2tk9av7ph0ga6.cloudfront.net/image/catalog/2021/4/pifpaf-dino-1-700xauto.jpg", description: "A baby comforter in the shape of a snuggly dragon.")
 
 Product.create(name: "Bad Cat", price: 5, image_url: "https://thoresbycottage.com/wp-content/uploads/2018/08/IMG_1289-1024x683.jpg", description: "A somewhat abstract interpretation of a cat.")
+
+Supplier.create!(name: "Pablo Picasso", email: "p@gmail.com", phone_number: "123234567")
+Supplier.create!(name: "Georgia O'Keefe", email: "gk@gmail.com", phone_number: "456432123")
