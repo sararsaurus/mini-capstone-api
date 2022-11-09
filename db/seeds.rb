@@ -9,3 +9,8 @@
 # Supplier.create!(name: "Pablo Picasso", email: "p@gmail.com", phone_number: "123234567")
 
 # Supplier.create!(name: "Georgia O'Keefe", email: "gk@gmail.com", phone_number: "456432123")
+
+Image.create!(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5aMSmnnPZmyartM6NLWLDoLKsdDOcSRnajgidZuPcXg&s")
+Image.create!(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsZbcnW1tAe7NdLSErIFDcXKG3xP0RSEfDIQ-j2eLY&s")
+Image.create!(url: "https://media.istockphoto.com/id/1391140241/photo/hippopotamus-gaping-mouth.jpg?b=1&s=170667a&w=0&k=20&c=Mrj5LRTVdDF3XAL3L-h-aqMLyCG2Dwt2GWGS-4DZrIw=")
+Image.create!(url: "https://media.istockphoto.com/id/1323473797/photo/hippopotamus-swimming-underwater.jpg?b=1&s=170667a&w=0&k=20&c=E9L9Rv8YFY7u2wq1ywiIIzZyvJ280YsZQ8PqS2-XgB0=")

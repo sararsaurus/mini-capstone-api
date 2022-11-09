@@ -14,7 +14,8 @@ Content-Type: application/json
 "price": 22,
 "image_url": "no url", 
 "description": "hi",
-"created_at": "today"
+"created_at": "today",
+"supplier_id": "2"
 }
 
 ### PRODUCTS UPDATE
