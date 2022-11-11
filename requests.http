@@ -1,8 +1,11 @@
 ### PRODUCTS INDEX
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgxOTQwMzJ9.awMp-323xfKGCHiFUq0rwo2ZA137CLzI_oeHGltNR1o,
+Content-Type: application/json
 
 ### PRODUCTS SHOW
 GET http://localhost:3000/products/6.json
+
 
 
 ### PRODUCTS CREATE (MUST LEAVE A LINE AFTER CONTENT TYPE!)
@@ -49,3 +52,24 @@ Content-Type: application/json
   "email": "amanda@example.com",
   "password": "password"
 }
+
+
+### ORDERS CREATE
+POST http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
+Content-Type: application/json
+
+{
+"product_id": 6,
+"quantity": 5
+}
+
+
+### ORDERS SHOW
+GET http://localhost:3000/orders/1.json
+Authorization: Bearer
+
+
+
+### ORDERS INDEX
+GET http://localhost:3000/orders.json
