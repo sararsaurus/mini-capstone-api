@@ -66,10 +66,13 @@ Content-Type: application/json
 
 
 ### ORDERS SHOW
-GET http://localhost:3000/orders/1.json
-Authorization: Bearer
+GET http://localhost:3000/orders/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
+Content-Type: application/json
 
 
 
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
+Content-Type: application/json
