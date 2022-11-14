@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :authenticate_admin!, except: [:index, :show]
+  before_action :authenticate_admin, except: [:index, :show]
 
   def index
     pp current_user
@@ -13,7 +13,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    #below is passing in a hash from an end user
     @product = Product.new(
       name: params["name"],
       price: params["price"],

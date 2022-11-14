@@ -1,15 +1,15 @@
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjgyODQ5NzR9.hgTWiTEmfVDqWPsSPgj77q3zmmbwrg-3K7WHQEFmEcM
+@jwt-2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyODQ4Mzl9.LkQl0n7QuY4JBx41EnOSXh3rF9lz-FmawSPa_hxDmjA
+
 ### PRODUCTS INDEX
 GET http://localhost:3000/products.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgxOTQwMzJ9.awMp-323xfKGCHiFUq0rwo2ZA137CLzI_oeHGltNR1o,
-Content-Type: application/json
 
 ### PRODUCTS SHOW
 GET http://localhost:3000/products/6.json
 
-
-
-### PRODUCTS CREATE (MUST LEAVE A LINE AFTER CONTENT TYPE!)
+### PRODUCTS CREATE
 POST http://localhost:3000/products.json
+Authorization: Bearer {{jwt-2}}
 Content-Type: application/json
 
 {
@@ -23,23 +23,24 @@ Content-Type: application/json
 
 ### PRODUCTS UPDATE
 PATCH http://localhost:3000/products/6.json
+Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
 
 {
-  "name": "Tiny Hippo"
+  "name": "Itsy bitsy Hippo"
 }
 
 ### PRODUCTS DESTROY
-
-DELETE http://localhost:3000/products/13.json
+DELETE http://localhost:3000/products/20.json
+Authorization: Bearer {{admin-jwt}}
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "amanda",
-  "email": "amanda@example.com",
+  "name": "sara",
+  "email": "sara@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -49,14 +50,14 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "amanda@example.com",
+  "email": "sara@example.com",
   "password": "password"
 }
 
 
 ### ORDERS CREATE
 POST http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
+Authorization: Bearer 
 Content-Type: application/json
 
 {
@@ -76,3 +77,4 @@ Content-Type: application/json
 GET http://localhost:3000/orders.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
 Content-Type: application/json
+
