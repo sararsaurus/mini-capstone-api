@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NjgyODQ5NzR9.hgTWiTEmfVDqWPsSPgj77q3zmmbwrg-3K7WHQEFmEcM
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Njg1MzYwMDZ9.MDAueXXEvzWJLjWzkJBypNdtpa34cj0XI_uHifaL0ac
 @jwt-2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyODQ4Mzl9.LkQl0n7QuY4JBx41EnOSXh3rF9lz-FmawSPa_hxDmjA
 
 ### PRODUCTS INDEX
@@ -27,7 +27,7 @@ Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
 
 {
-  "name": "Itsy bitsy Hippo"
+  "name": "Little Octopus"
 }
 
 ### PRODUCTS DESTROY
