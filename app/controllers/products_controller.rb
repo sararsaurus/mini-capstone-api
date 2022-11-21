@@ -24,9 +24,9 @@ class ProductsController < ApplicationController
       description: params["description"],
       supplier_id: params["supplier_id"],
     )
-    if @product.save #happy path
+    if @product.save
       render json: @product.as_json
-    else #sad path
+    else
       render json: { errors: @product.errors.full_messages }, status: 418
     end
   end
@@ -43,8 +43,6 @@ class ProductsController < ApplicationController
     else
       render json: { errors: product.errors.full_messages }, status: 418
     end
-    # @product = product
-
   end
 
   def destroy

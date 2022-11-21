@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Njg1MzYwMDZ9.MDAueXXEvzWJLjWzkJBypNdtpa34cj0XI_uHifaL0ac
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Njg2MjI4MTJ9.uCTtlFQLVlJqIdmTqfPJqh1ISIc1bVTgLxN2_djnBWs
 @jwt-2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyODQ4Mzl9.LkQl0n7QuY4JBx41EnOSXh3rF9lz-FmawSPa_hxDmjA
 
 ### PRODUCTS INDEX
@@ -68,13 +68,33 @@ Content-Type: application/json
 
 ### ORDERS SHOW
 GET http://localhost:3000/orders/2.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
+Authorization: Bearer 
 Content-Type: application/json
 
 
 
 ### ORDERS INDEX
 GET http://localhost:3000/orders.json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyNzU5OTV9.xPmt-2uY2U23xTaD2_Y0fTZhvU_U-yhXnaKEMwrnRXg
+Authorization: Bearer 
 Content-Type: application/json
+
+
+### CARTED_PRODUCTS CREATE
+POST http://localhost:3000/carted_products.json
+Authorization: Bearer {{admin-jwt}}
+Content-Type: application/json
+
+{
+"product_id": 1,
+"quantity": 4,
+"order_id": "nil"
+}
+
+
+### CARTED_PRODUCTS INDEX
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer {{admin-jwt}}
+Content-Type: application/json
+
+
 

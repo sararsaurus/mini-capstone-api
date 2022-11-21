@@ -12,11 +12,21 @@ class OrdersController < ApplicationController
   end
 
   def create
-    product = Product.find_by(id: params[:product_id])
+    # carted_products = current_user.carted_products.where(status: params["carted"])
 
+    product = Product.find_by(id: params[:product_id])
     calculated_subtotal = product.price * params[:quantity].to_i
     calculated_tax = calculated_subtotal * 0.09
     calculated_total = calculated_subtotal + calculated_tax
+
+    # calculated_subtotal = carted_products.price * params[:quantity].to_i
+    # calculated_tax = calculated_subtotal * 0.09
+    # calculated_total = calculated_subtotal + calculated_tax
+
+    # carted_products.each do |carted_product|
+
+    # end
+    #comment
 
     @order = Order.new(
       user_id: current_user.id,
