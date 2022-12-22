@@ -1,5 +1,5 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2Njg2MjI4MTJ9.uCTtlFQLVlJqIdmTqfPJqh1ISIc1bVTgLxN2_djnBWs
-@jwt-2 = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2NjgyODQ4Mzl9.LkQl0n7QuY4JBx41EnOSXh3rF9lz-FmawSPa_hxDmjA
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NzE4MTYxODF9.Q8iw54OUU8vUtUeqAMMCEyjzteH35nTjvwL3eGK_UD8
+
 
 ### PRODUCTS INDEX
 GET http://localhost:3000/products.json
@@ -9,38 +9,38 @@ GET http://localhost:3000/products/6.json
 
 ### PRODUCTS CREATE
 POST http://localhost:3000/products.json
-Authorization: Bearer {{jwt-2}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-"name": "Chocolate cake",
-"price": 22,
+"name": "FROZEN CAKE",
+"price": 16,
 "image_url": "no url", 
-"description": "hi",
+"description": "BRRR",
 "created_at": "today",
 "supplier_id": "2"
 }
 
 ### PRODUCTS UPDATE
-PATCH http://localhost:3000/products/6.json
-Authorization: Bearer {{admin-jwt}}
+PATCH http://localhost:3000/products/21.json
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
-  "name": "Little Octopus"
+  "price": -16
 }
 
 ### PRODUCTS DESTROY
-DELETE http://localhost:3000/products/20.json
-Authorization: Bearer {{admin-jwt}}
+DELETE http://localhost:3000/products/21.json
+Authorization: Bearer {{jwt}}
 
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "sara",
-  "email": "sara@example.com",
+  "name": "test",
+  "email": "test@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -81,7 +81,7 @@ Content-Type: application/json
 
 ### CARTED_PRODUCTS CREATE
 POST http://localhost:3000/carted_products.json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 {
@@ -93,7 +93,7 @@ Content-Type: application/json
 
 ### CARTED_PRODUCTS INDEX
 GET http://localhost:3000/carted_products.json
-Authorization: Bearer {{admin-jwt}}
+Authorization: Bearer {{jwt}}
 Content-Type: application/json
 
 
